@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddNew.iml" filepath="$PROJECT_DIR$/.idea/modules/AddNew.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddNew_main.iml" filepath="$PROJECT_DIR$/.idea/modules/AddNew_main.iml" group="AddNew" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddNew_test.iml" filepath="$PROJECT_DIR$/.idea/modules/AddNew_test.iml" group="AddNew" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addNew1.iml" filepath="$PROJECT_DIR$/.idea/modules/addNew1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addNew1_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addNew1_main.iml" group="addNew1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addNew1_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addNew1_test.iml" group="addNew1" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-test_main.iml" group="addressbook-selenium-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-selenium-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-selenium-test_test.iml" group="addressbook-selenium-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstTest.iml" filepath="$PROJECT_DIR$/.idea/modules/firstTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstTest_main.iml" filepath="$PROJECT_DIR$/.idea/modules/firstTest_main.iml" group="firstTest" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/firstTest_test.iml" filepath="$PROJECT_DIR$/.idea/modules/firstTest_test.iml" group="firstTest" />
