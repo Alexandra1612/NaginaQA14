@@ -26,6 +26,9 @@ public class FirstClass {
     driver.findElement(By.xpath("//div[@id='blog-view']/div[2]")).click();
   }
 
+
+
+
   @AfterClass(alwaysRun = true)
   public void tearDown() throws Exception {
     driver.quit();
