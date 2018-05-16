@@ -1,3 +1,6 @@
+package com.telran.addressbook.tests;
+
+import com.telran.addressbook.appManager.ApplicationManager;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -8,8 +11,7 @@ public class TestBase {
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception {
         app.start();
-        app.open("http://localhost/addressbook/");
-        app.login("admin", "secret");
+
     }
 
 
@@ -19,8 +21,5 @@ public class TestBase {
 
     }
 
-    //    protected void selectContact() {driver.findElement(By.name("selected[]")).click(); }
-//
-//    protected void deleteContact(){driver.findElement(By.name("delete")).click(); }
 
 }
