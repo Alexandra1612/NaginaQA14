@@ -44,14 +44,7 @@ public class ApplicationManager {
         driver.quit();
     }
 
-    private boolean isElementPresent(By by) {
-      try {
-        driver.findElement(by);
-        return true;
-      } catch (NoSuchElementException e) {
-        return false;
-      }
-    }
+
 
 
     public GroupHelper getGroupHelper() {

@@ -4,14 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 
-public class ContactHelper {
-    private WebDriver driver;
+public class ContactHelper extends HelperBase{
+
     public ContactHelper(WebDriver driver) {
-        this.driver=driver;
+        super(driver);
     }
 
     public void goToAddingNewContact() {
-        driver.findElement(By.linkText("add new")).click();
+        driver.findElement(By.xpath("//*[@href='edit.php']")).click();
     }
 
     public void fillInTheForm(String address, String name, String surname) {
@@ -29,28 +29,22 @@ public class ContactHelper {
 
     public void submitContactModification() { driver.findElement(By.name("submit")).click(); }
 
-    private boolean isAlertPresent() {
-      try {
-        driver.switchTo().alert();
-        return true;
-      } catch (NoAlertPresentException e) {
-        return false;
-      }
-    }
+    public void submitContactModificationUpdate() { driver.findElement(By.name("update")).click(); }
 
-    public void acceptAlert(){
-        driver.switchTo().alert().accept();
-    }
+
+
 
     public void selectContact() {
         driver.findElement(By.name("selected[]")).click();
     }
 
-    public void initContactDeletion() { driver.findElement(By.xpath("//*[@value='Delete']")).click(); }
+    public void initContactDeletion() {
+        driver.findElement(By.xpath("//*[@value='Delete']")).click(); }
 
     public int getContactCount() {
         return driver.findElements(By.id("2")).size();
     }
 
-    public void initContactEdition() {driver.findElement(By.xpath("//*[@title='Edit']")).click();}
+    public void initContactEdition(){
+        driver.findElement(By.xpath("//*[@title='Edit']")).click();}
 }
