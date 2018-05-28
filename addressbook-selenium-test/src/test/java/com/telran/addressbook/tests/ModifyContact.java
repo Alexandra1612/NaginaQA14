@@ -1,5 +1,6 @@
 package com.telran.addressbook.tests;
 
+import com.telran.addressbook.model.ContactData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,7 +12,7 @@ public class ModifyContact extends TestBase {
     int before= app.getContactHelper().getContactCount();
     app.getContactHelper().selectContact();
     app.getContactHelper().initContactEdition();
-    app.getContactHelper().fillInTheForm("Tel-Aviv", "Nathan", "Forshmidt");
+    app.getContactHelper().fillInTheForm(new ContactData().withAddress("Tel-Aviv").withFirstname("Nathan").withLastname("Forshmidt") );
     app.getContactHelper().submitContactModificationUpdate();
     int after= app.getContactHelper().getContactCount();
     Assert.assertEquals(after,before);

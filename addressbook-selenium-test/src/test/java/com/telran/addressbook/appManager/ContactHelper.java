@@ -1,5 +1,6 @@
 package com.telran.addressbook.appManager;
 
+import com.telran.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
@@ -11,19 +12,14 @@ public class ContactHelper extends HelperBase{
     }
 
     public void goToAddingNewContact() {
-        driver.findElement(By.xpath("//*[@href='edit.php']")).click();
+       click(By.xpath("//*[@href='edit.php']"));
     }
 
-    public void fillInTheForm(String address, String name, String surname) {
-        driver.findElement(By.name("firstname")).click();
-        driver.findElement(By.name("firstname")).clear();
-        driver.findElement(By.name("firstname")).sendKeys(name);
-        driver.findElement(By.name("lastname")).click();
-        driver.findElement(By.name("lastname")).clear();
-        driver.findElement(By.name("lastname")).sendKeys(surname);
-        driver.findElement(By.name("address")).click();
-        driver.findElement(By.name("address")).clear();
-        driver.findElement(By.name("address")).sendKeys(address);
+    public void fillInTheForm(ContactData contactData) {
+        type(By.name("firstname"), contactData.getFirstname());
+        type(By.name("lastname"), contactData.getLastname());
+        type(By.name("address"),contactData.getAddress());
+
 
     }
 

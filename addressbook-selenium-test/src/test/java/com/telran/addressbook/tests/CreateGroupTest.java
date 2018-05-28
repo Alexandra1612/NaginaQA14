@@ -13,7 +13,7 @@ public class CreateGroupTest extends TestBase {
     app.getNavigationHelper().goToGroupsPage();
     int before= app.getGroupHelper().getGroupCount();
       app.getGroupHelper().newGroup((By.name("new")));
-    app.getGroupHelper().fillGroupForm(new GroupData("name1", "header", "footer"));
+    app.getGroupHelper().fillGroupForm(new GroupData().withName("name1").withHeader("header").withFooter("footer"));
     app.getGroupHelper().submitCreateGroup(By.name("submit"));
     app.getGroupHelper().returnToGroupsPage();
     int after= app.getGroupHelper().getGroupCount();
@@ -25,7 +25,7 @@ public class CreateGroupTest extends TestBase {
    app.getNavigationHelper().goToGroupsPage();
    int before= app.getGroupHelper().getGroupCount();
    app.getGroupHelper().newGroup((By.name("new")));
-   app.getGroupHelper().fillGroupForm(new GroupData("n", "h", "f"));
+   app.getGroupHelper().fillGroupForm(new GroupData().withName("n").withHeader("h").withFooter("f"));
    app.getGroupHelper().submitCreateGroup(By.name("submit"));
    app.getGroupHelper().returnToGroupsPage();
    int after= app.getGroupHelper().getGroupCount();
@@ -37,7 +37,7 @@ public class CreateGroupTest extends TestBase {
    app.getNavigationHelper().goToGroupsPage();
    int before= app.getGroupHelper().getGroupCount();
      app.getGroupHelper().newGroup((By.name("new")));
-   app.getGroupHelper().fillGroupForm(new GroupData("", "", ""));
+   app.getGroupHelper().fillGroupForm(new GroupData());
    app.getGroupHelper().submitCreateGroup(By.name("submit"));
    app.getGroupHelper().returnToGroupsPage();
    int after= app.getGroupHelper().getGroupCount();

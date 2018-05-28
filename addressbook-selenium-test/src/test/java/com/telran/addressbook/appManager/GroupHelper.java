@@ -52,7 +52,7 @@ public class GroupHelper extends HelperBase{
 
     public void createGroup() {
         newGroup(By.name("new"));
-    fillGroupForm(new GroupData("n", "h", "f"));
+    fillGroupForm(new GroupData().withName("n").withHeader("h").withFooter("f"));
     submitCreateGroup(By.name("submit"));
     returnToGroupsPage();
     }
