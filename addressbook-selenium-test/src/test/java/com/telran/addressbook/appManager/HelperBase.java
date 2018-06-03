@@ -1,9 +1,13 @@
 package com.telran.addressbook.appManager;
 
+import com.telran.addressbook.model.ContactData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import java.io.File;
 
 public class HelperBase {
     protected WebDriver driver;
@@ -20,6 +24,22 @@ public class HelperBase {
         }
 
     }
+
+
+
+    public void selectCertainGroup(By locator, String name) {
+        new Select(driver.findElement(locator))
+                .selectByVisibleText(name);
+    }
+
+
+    public void attach(By locator, File file) {
+        if(file!=null){
+            driver.findElement(locator).sendKeys(file.getAbsolutePath());
+        }
+
+    }
+
 
     public void click(By locator) {
         driver.findElement(locator).click();

@@ -22,6 +22,8 @@ public class ApplicationManager {
         this.browser=browser;
     }
 
+    public ApplicationManager(String browser, String chrome) { }
+
 
     public void start() {
 

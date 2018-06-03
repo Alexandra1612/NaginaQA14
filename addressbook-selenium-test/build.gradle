@@ -19,4 +19,5 @@ task testGroups(type:Test){
     useTestNG{
         suites 'src/test/resources/testing-groups.xml'
     }
+    systemProperty 'browser',"${browser}"
 }

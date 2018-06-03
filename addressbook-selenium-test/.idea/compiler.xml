@@ -4,6 +4,10 @@
     <bytecodeTargetLevel>
       <module name="addressbook-selenium-test_main" target="1.8" />
       <module name="addressbook-selenium-test_test" target="1.8" />
+      <module name="mishpahug_main" target="1.8" />
+      <module name="mishpahug_test" target="1.8" />
+      <module name="NaginaQA14-mishpahug_main" target="1.8" />
+      <module name="NaginaQA14-mishpahug_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
