@@ -21,7 +21,10 @@ public class ContactDataGenerator {
     private static void save(List<ContactData> contacts, File file) throws IOException {
         Writer writer=new FileWriter(file);
         for (ContactData contact:contacts) {
-            writer.write(String.format("%s;%s;%s\n",contact.getFirstname(), contact.getLastname(), contact.getAddress()));
+            writer.write(String.format("%s;%s;%s;%s;%s\n",contact.getFirstname(),
+                    contact.getLastname(),
+                    contact.getAddress(),
+                    contact.getGroup()));
         }
         writer.close();
     }
@@ -31,7 +34,8 @@ public class ContactDataGenerator {
         for(int i=0; i<count; i++){
             contacts.add(new ContactData().withFirstname(String.format("aaa %s",i))
                     .withLastname(String.format("bbb %s",i))
-                    .withAddress(String.format("ccc %s",i)));
+                    .withAddress(String.format("ccc %s",i))
+            .withGroup(String.format("ddd %s",i)));
         }
         return contacts;
     }
