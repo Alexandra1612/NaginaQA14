@@ -1,22 +1,50 @@
 package com.telran.addressbook.model;
 
+import java.util.Objects;
+
 public class GroupData {
     private  String name;
     private  String header;
     private  String footer;
+    private int id;
 
     public GroupData withName(String name) {
         this.name = name;
         return this;
     }
 
+    public GroupData withId(int id) {
+        this.id=id;
+        return this;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+
+
     @Override
     public String toString() {
         return "GroupData{" +
                 "name='" + name + '\'' +
-                ", header='" + header + '\'' +
-                ", footer='" + footer + '\'' +
+                ", id=" + id +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroupData groupData = (GroupData) o;
+        return id == groupData.id &&
+                Objects.equals(name, groupData.name);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(name, id);
     }
 
     public GroupData withHeader(String header) {

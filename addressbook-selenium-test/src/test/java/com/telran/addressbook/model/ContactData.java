@@ -2,7 +2,7 @@ package com.telran.addressbook.model;
 
 import java.io.File;
 
-public class ContactData {
+public class  ContactData {
 
     private String address;
     private String firstname;
